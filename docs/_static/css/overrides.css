@@ -1,0 +1,25 @@
+pre, tt, code {
+    font-family: 'Inconsolata',
+                 'Consolas',
+                 'Menlo',
+                 'Deja Vu Sans Mono',
+                 'Bitstream Vera Sans Mono',
+                 monospace;
+}
+
+img.logo {
+    width: 130px;
+    padding-bottom: 2em;
+}
+
+
+p.grace-note {
+    font-size: 21px;
+    font-style: italic;
+    padding: 1.4em 0 1.4em 0;
+    text-align: center;
+}
+
+#github-comments {
+    background: #CCC;
+}
