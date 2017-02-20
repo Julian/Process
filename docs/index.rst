@@ -4,6 +4,9 @@ Process
 
 Process is a testing-friendly implementation of (sub)process spawning.
 
+Its API is inspired loosely by Rust's :rust:`std::process::Command
+<std/process/struct.Command.html>`.
+
 
 Contents
 --------

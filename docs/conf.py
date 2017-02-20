@@ -107,11 +107,11 @@ nitpick_ignore = [
     ("py:class", "twisted.python.usage.Options"),
 ]
 
-intersphinx_mapping = {
-    "attr": ("https://attrs.readthedocs.io/en/latest/", None),
-    "python": ("https://docs.python.org/2.7", None),
-    "pyrsistent": ("https://pyrsistent.readthedocs.io/en/latest/", None),
-}
+intersphinx_mapping = dict(
+    attr=("https://attrs.readthedocs.io/en/latest/", None),
+    python=("https://docs.python.org/2.7", None),
+    pyrsistent=("https://pyrsistent.readthedocs.io/en/latest/", None),
+)
 extlinks = dict(
     (k, (urljoin(url, "%s.html"), None))
     for k, (url, _) in intersphinx_mapping.iteritems()
@@ -121,6 +121,7 @@ extlinks.update(
     issue=("https://github.com/Julian/Process/issues/%s", None),
     pypi=("https://pypi.org/project/%s/", None),
     python=("https://docs.python.org/2.7/%s", None),
+    rust=("https://doc.rust-lang.org/%s", None),
 )
 
 # -- Options for HTML output ----------------------------------------------
