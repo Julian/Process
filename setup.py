@@ -23,7 +23,7 @@ setup(
     name="process",
     url="https://github.com/Julian/Process",
 
-    description="",
+    description="Testing-friendly subprocess spawning.",
     long_description=long_description,
 
     author="Julian Berman",
@@ -33,6 +33,8 @@ setup(
 
     setup_requires=["vcversioner>=2.16.0.0"],
     vcversioner={"version_module_paths": ["process/_version.py"]},
+
+    install_requires=["attrs>=16.3.0", "filesystems", "pyrsistent"],
 
     classifiers=classifiers,
 )
