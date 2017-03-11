@@ -32,3 +32,7 @@ class TestCommand(TestCase):
             command.prepended_arguments("baz", cwd=Path("tmp", "bar")),
             Command("baz", "foo", "bar", cwd=Path("tmp", "bar")),
         )
+
+    def test_random_extra_kwargs(self):
+        with self.assertRaises(TypeError):
+            Command("foo", bar=123)
