@@ -2,7 +2,7 @@ from pyrsistent import pdeque
 import attr
 
 
-@attr.s(init=False)
+@attr.s(hash=True, init=False)
 class Command(object):
     """
     A command.

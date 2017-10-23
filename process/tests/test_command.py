@@ -36,3 +36,6 @@ class TestCommand(TestCase):
     def test_random_extra_kwargs(self):
         with self.assertRaises(TypeError):
             Command("foo", bar=123)
+
+    def test_it_is_hashable(self):
+        self.assertThat(len({Command("foo"), Command("bar")}), Equals(2))

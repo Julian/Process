@@ -34,7 +34,7 @@ setup(
     setup_requires=["vcversioner>=2.16.0.0"],
     vcversioner={"version_module_paths": ["process/_version.py"]},
 
-    install_requires=["attrs>=16.3.0", "filesystems", "pyrsistent"],
+    install_requires=["attrs>=17.2.0", "filesystems", "pyrsistent"],
 
     classifiers=classifiers,
 )
