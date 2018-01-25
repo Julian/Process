@@ -19,13 +19,13 @@ class Command(object):
 
         self.argv = pdeque(argv)
 
-    def arguments(self, *argv, **kwargs):
+    def extended(self, *argv, **kwargs):
         fields = attr.asdict(self)
         fields.update(kwargs)
         argv = fields.pop("argv").extend(argv)
         return self.__class__(*argv, **fields)
 
-    def prepended_arguments(self, *argv, **kwargs):
+    def prepended(self, *argv, **kwargs):
         fields = attr.asdict(self)
         fields.update(kwargs)
         argv = fields.pop("argv").extendleft(reversed(argv))

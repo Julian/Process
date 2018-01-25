@@ -5,31 +5,31 @@ from testtools.matchers import Equals
 
 
 class TestCommand(TestCase):
-    def test_arguments(self):
+    def test_extended(self):
         command = Command("foo", "bar")
         self.assertThat(
-            command.arguments("--baz", "quux"),
+            command.extended("--baz", "quux"),
             Equals(Command("foo", "bar", "--baz", "quux")),
         )
 
-    def test_arguments_override(self):
+    def test_extended_override(self):
         command = Command("foo", "bar", cwd=Path("tmp", "foo"))
         self.assertThat(
-            command.arguments("baz", cwd=Path("tmp", "bar")),
+            command.extended("baz", cwd=Path("tmp", "bar")),
             Equals(Command("foo", "bar", "baz", cwd=Path("tmp", "bar"))),
         )
 
-    def test_prepended_arguments(self):
+    def test_prepended(self):
         command = Command("foo", "bar")
         self.assertThat(
-            command.prepended_arguments("baz", "quux"),
+            command.prepended("baz", "quux"),
             Equals(Command("baz", "quux", "foo", "bar")),
         )
 
-    def test_prepended_arguments_override(self):
+    def test_prepended_override(self):
         command = Command("foo", "bar", cwd=Path("tmp", "foo"))
         self.assertThat(
-            command.prepended_arguments("baz", cwd=Path("tmp", "bar")),
+            command.prepended("baz", cwd=Path("tmp", "bar")),
             Equals(Command("baz", "foo", "bar", cwd=Path("tmp", "bar"))),
         )
 
