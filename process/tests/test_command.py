@@ -39,3 +39,7 @@ class TestCommand(TestCase):
 
     def test_it_is_hashable(self):
         self.assertThat(len({Command("foo"), Command("bar")}), Equals(2))
+
+    def test_extra_nonsense(self):
+        with self.assertRaises(TypeError):
+            Command("foo", bar=12)
