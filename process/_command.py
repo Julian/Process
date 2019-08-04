@@ -7,6 +7,9 @@ class Command(object):
     """
     A command.
 
+    Inspired by Rust's :rust:`std::process::Command
+    <std/process/struct.Command.html>`.
+
     """
 
     argv = attr.ib()
