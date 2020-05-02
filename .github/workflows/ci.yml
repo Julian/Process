@@ -20,7 +20,7 @@ jobs:
           - name: pypy3
             toxenv: pypy3
           - name: pypy3
-            toxenv: docs-html
+            toxenv: docs-dirhtml
           - name: pypy3
             toxenv: docs-doctest
           - name: pypy3
