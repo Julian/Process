@@ -1,2 +1,8 @@
+try:
+    from importlib import metadata
+except ImportError: # for Python<3.8
+    import importlib_metadata as metadata
+
+
+__version__ = metadata.version("process")
 from process._command import Command
-from process._version import __version__
