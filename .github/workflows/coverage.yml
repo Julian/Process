@@ -22,4 +22,4 @@ jobs:
     - name: Collect & Upload Coverage
       run: python -m tox -e codecov
       env:
-        CODECOV_TOKEN: ${{ secrets.codecov_token }}
+        CODECOV_TOKEN: 08da8fb6-9366-4830-9b9e-ea9225e1a07a
